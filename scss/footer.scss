@@ -1,0 +1,63 @@
+//====================================================================================================
+
+.footer {
+   &__container {
+      padding-top: rem(60);
+      padding-bottom: rem(25);
+   }
+
+   &__label {
+      text-align: center;
+      line-height: math.div(21, 16);
+   }
+
+   &__social {
+      margin-top: rem(20);
+      margin-bottom: rem(30);
+      display: flex;
+      justify-content: center;
+      gap: rem(16);
+   }
+
+   &__social-link {
+      img {
+         width: 100%;
+         object-fit: cover;
+      }
+   }
+
+   &__contacts {
+      display: flex;
+      justify-content: space-between;
+   }
+
+   &__contacts-body {}
+
+   &__contacts-title {
+      color: rgba(255, 255, 255, 0.5);
+      font-size: rem(13);
+      line-height: math.div(17, 13);
+   }
+
+   &__contacts-phone {
+      display: inline-block;
+      line-height: math.div(21, 16);
+
+      &:hover {
+         color: rgba(255, 255, 255, 0.8);
+      }
+   }
+
+   &__contacts-mail {
+      display: block;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+      line-height: math.div(21, 16);
+
+      &:hover {
+         color: rgba(255, 255, 255, 0.8);
+      }
+   }
+}
+
+//====================================================================================================

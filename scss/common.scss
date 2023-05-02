@@ -1,0 +1,105 @@
+// Заголовки, общие БЭМ блоки и т.д.
+
+.page {
+   &__new {}
+
+   &__shipday {}
+}
+
+//=============================================================================================================================================
+
+.title {
+   font-size: rem(32);
+   line-height: math.div(43, 32);
+   display: flex;
+   justify-content: center;
+   margin-top: rem(50);
+   margin-bottom: rem(30);
+}
+
+//==============================================================================================================================================
+
+.btn {
+   display: block;
+   text-transform: uppercase;
+   background: linear-gradient(87.23deg, rgba(128, 26, 179, 0) -91.42%, #4C4CFF 99.79%);
+   border-radius: rem(4);
+   padding: rem(12) rem(19.25);
+
+   &:hover {
+      background: linear-gradient(87.23deg, rgba(146, 42, 198, 0) -91.42%, #3131fa 99.79%);
+   }
+}
+
+//==============================================================================================================================================
+
+.card {
+   display: flex;
+   flex-direction: column;
+   background-color: #fff;
+   text-align: center;
+   padding: rem(10) rem(10) rem(10) rem(10);
+   border-radius: rem(4);
+}
+
+//==============================================================================================================================================
+
+.old-price {
+   color: #d9d9d9;
+   text-decoration-line: line-through;
+   line-height: math.div(22, 16);
+}
+
+.current-price {
+   color: $black;
+   font-weight: 700;
+}
+
+//=============================================================================================================================================
+
+
+@media (min-width:$mobile) {
+
+   .swiper-horizontal>.swiper-pagination-bullets,
+   .swiper-pagination-bullets.swiper-pagination-horizontal,
+   .swiper-pagination-custom,
+   .swiper-pagination-fraction {
+      display: none;
+   }
+}
+
+//==============================================================================================================================================
+
+.rating:not(:checked)>input {
+   display: none;
+}
+
+.rating {
+   display: inline-flex;
+   flex-direction: row-reverse;
+   justify-content: flex-end;
+   gap: rem(8);
+}
+
+#rate:not(:checked)>label {
+   cursor: pointer;
+   width: 30px;
+   height: 30px;
+   display: block;
+   opacity: 0.3;
+   line-height: 33px;
+   text-align: center;
+}
+
+#rate:not(:checked)>label:hover,
+/* принимает  цвет при наведении*/
+#rate:not(:checked)>label:hover~label {
+   opacity: 1;
+
+}
+
+#rate>input:checked~label {
+   opacity: 1;
+}
+
+//==============================================================================================================================================
